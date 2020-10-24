@@ -36,16 +36,16 @@ def stop():
 	i2c.write(ADDR_MOTOR_CNTRL,bytearray([0,0,0,0,0]))
     
 # demonstrate commands
-forward(200)	# drive forward at speed 200/255
-sleep(2000)		# let drive forward command run for 2 seconds
-stop()			# stop moving
-sleep(1000)		# allow 1 second for robot to stop
-turnRight(100)	# veer to the right at speed 100/255
-sleep(1000)		# allow turn command to run for 1 second
-forward(200)	# drive forward at speed 200/255
-sleep(1000)		# let drive forward command run for 1 second
-stop()			# stop robot
-sleep(1000)		# allow 1 second for robot to stop
-backward(80)	# drive backward at speed 80/255
-sleep(1000)		# drive backward for 1 second
-stop()			# stop moving
+forward(200)    # drive forward at speed 200/255
+sleep(2000)     # let drive forward command run for 2 seconds
+stop()          # stop moving
+sleep(1000)     # allow 1 second for robot to stop
+turnRight(100)  # veer to the right at speed 100/255
+sleep(1000)     # allow turn command to run for 1 second
+forward(200)    # drive forward at speed 200/255
+sleep(1000)     # let drive forward command run for 1 second
+stop()          # stop robot
+sleep(1000)     # allow 1 second for robot to stop
+backward(80)    # drive backward at speed 80/255
+sleep(1000)     # drive backward for 1 second
+stop()          # stop moving
