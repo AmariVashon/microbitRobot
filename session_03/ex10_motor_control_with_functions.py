@@ -19,7 +19,7 @@ def forward(speed):
 def backward(speed):
 	# spins both wheels backward at the same speed
 	# speed : byte, motor spin speed.  0 is stopped, 255 is max speed.
-   	i2c.write(ADDR_MOTOR_CNTRL,bytearray([0,DIR_BACKWARD,speed,DIR_BACKWARD,speed]))
+	i2c.write(ADDR_MOTOR_CNTRL,bytearray([0,DIR_BACKWARD,speed,DIR_BACKWARD,speed]))
     
 def turnRight(speed):
 	# spins left wheel forward to turn robot to its right
@@ -29,11 +29,11 @@ def turnRight(speed):
 def turnLeft(speed):
 	# spins right wheel forward to turn robot to its left
 	# speed : byte, motor spin speed.  0 is stopped, 255 is max speed.
-    i2c.write(ADDR_MOTOR_CNTRL,bytearray([0,DIR_FORWARD,0,DIR_FORWARD,speed]))
+	i2c.write(ADDR_MOTOR_CNTRL,bytearray([0,DIR_FORWARD,0,DIR_FORWARD,speed]))
 
 def stop():
 	# stops both drive motors
-    i2c.write(ADDR_MOTOR_CNTRL,bytearray([0,0,0,0,0]))
+	i2c.write(ADDR_MOTOR_CNTRL,bytearray([0,0,0,0,0]))
     
 # demonstrate commands
 forward(200) 	# drive forward at speed 200/255
